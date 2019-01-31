@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container">
+            <div id="headingContainer">
+
+                <h1>Customer List</h1>
+                <button id="addCustomerButton">Add New Customer</button>
+
+                <!-- The Modal -->
+                <div id="customerModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Add Customer Details</h2>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="customerNameField" placeholder="Enter name">
+                            <input type="text" id="customerEmailField" placeholder="Enter email Id">
+                            <div id="validationMessage">Please enter all the fields !!!</div>
+                            
+
+                            <div class = "drop-zone" id="drop-zone" >
+                              
+                                    <div>Drag and drop image into below file input area to upload image !!</div>
+                                    <input class="drop-zone"type="file" name="file" id="imageFileInput" >
+
+                           
+
+                            </div>
+                            <img id='inputCustomerImage' src='./images/1.jpg'>
+
+                        </div>
+                        <div class="modal-footer">
+                            <h3>
+                                <button onclick="addCustomer()">Add customer</button>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p>You can add customer details from this page. When clicked, the left hand side data is replicated in RHS.</p>
+
+            <!--           The grid container which divides the screen into two vertical sections-->
+            <div class="grid-container">
+                <!--               The first grid item (to the LHS) displaying customer list-->
+                <div class="grid-item" id="customerCardsContainer">
+                    <div class="customerCard" onclick="showDetailedInfo(this)">
+                        <div>
+                            <h3 class='customerName'>Customer 1</h3>
+                            <h6 class='customerEmail'>Customer1@gmail.com</h6>
+                        </div><img class='customerImage' src='./images/1.jpg'>
+                    </div>
+
+
+                    <div class="customerCard" onclick="showDetailedInfo(this)">
+                        <div>
+
+                            <h3 class="customerName">Customer 2</h3>
+
+                            <h6 class="customerEmail">Customer2@gmail.com</h6>
+
+                        </div>
+
+                        <img class="customerImage" src='images/2.jpg'>
+
+                    </div>
+
+
+
+                    <div class='customerCard' onclick='showDetailedInfo(this)'>
+                        <div>
+
+                            <h3 class="customerName">Customer 3</h3>
+
+                            <h6 class="customerEmail">Customer3@gmail.com</h6>
+
+                        </div>
+
+                        <img class="customerImage" src='images/3.jpg'>
+
+                    </div>
+
+                </div>
+
+                <!--                The second grid item(to the RHS) which displays the item clicked-->
+                <div class="grid-item">
+                    <div class="customerCard" id="detailedInfoCard">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </body>
+
+</body>
+
+</html>

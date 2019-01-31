@@ -1,0 +1,281 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+
+}
+
+#headingContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+}
+
+
+#addCustomerButton {
+    background-color: #44c767;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    margin-left: 20px;
+}
+
+#addCustomerButton:hover {
+    background-color: #5cbf2a;
+}
+
+#addCustomerButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+.customerCard {
+    display: flex;
+    border-radius: 15px 50px;
+    background: #73AD21;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+img {
+    border-radius: 50%;
+}
+
+.customerName {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.customerEmail {
+
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.customerImage {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    background: transparent;
+}
+
+#inputCustomerImage {
+    margin-left: auto;
+    margin-right: auto;
+    /*    padding-left: 100px;*/
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    display: none;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    display: grid;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    color: #050;
+    margin-left: 10px;
+    font: bold 84% 'trebuchet ms', helvetica, sans-serif;
+    background-color: #fed;
+    border: 1px solid;
+    border-color: #696 #363 #363 #696;
+}
+
+#validationMessage {
+    color: red;
+    visibility: hidden;
+}
+
+#detailedInfoCard {
+    visibility: hidden;
+
+}
+
+.drop-zone {
+    /*Sort of important*/
+    width: 200px;
+    /*Sort of important*/
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    margin-left: -15px;
+    border: 2px dashed rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    font-family: Arial;
+    text-align: center;
+    position: relative;
+    line-height: 80px;
+    font-size: 10px;
+    color: rgba(0, 0, 0, .3);
+}
+
+.drop-zone input {
+    /*Important*/
+    position: absolute;
+    /*Important*/
+    cursor: pointer;
+    left: 0px;
+    top: 0px;
+    /*    Important This is only comment out for demonstration purposes.*/
+    opacity: 0;
+}
+
+/*Important*/
+#drop-zone.mouse-over {
+    border: 2px dashed rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .5);
+}
+
+
+/*If you dont want the button*/
+#clickHere {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: 20px;
+    line-height: 26px;
+    color: white;
+    font-size: 12px;
+    width: 100px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #3b85c3;
+
+}
+
+#clickHere:hover {
+    background-color: #4499DD;
+
+}
+
+#inputImageMessage{
+    margin-left: 10px;
+}
